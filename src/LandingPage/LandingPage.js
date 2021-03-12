@@ -1,5 +1,6 @@
 import React from 'react';
 import {TopNav} from './TopNav/TopNav';
+import {SearchBar} from '../SearchBar/SearchBar';
 import logo from '../assets/logo.png';
 import styles from './LandingPage.module.css';
 
@@ -8,6 +9,7 @@ export function LandingPage() {
         <div>
             <TopNav />
             <img src={logo} className={styles.logo} alt='logo'/>
+            <SearchBar />
         </div>
     );
     

@@ -5,10 +5,10 @@ export function TopNav() {
     return (
         <div className={styles['top-nav']}>
             <div className={styles.left}>
-                <button className='button'>Login</button>
+                <button className='buttonNav'>Login</button>
             </div>
             <div className={styles.right}>
-                <button className='button'>Signup</button>
+                <button className='buttonLog'>Signup</button>
             </div>
         </div>
     );
