@@ -1,12 +1,13 @@
 .nav-bar {
     display:flex;
     background: grey;
-    padding: 1rem 0;
     align-items: center;
+    justify-content: center;
 }
 
 .logo {
     height: 100px;
+    margin-right: 1rem ;
 }
 
 :global(.button).nav-button {

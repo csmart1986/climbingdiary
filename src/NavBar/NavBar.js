@@ -7,7 +7,7 @@ export function NavBar() {
     return (
         <div className={styles['nav-bar']}>
             <img src={logo} className={styles.logo} alt='climber diary logo'/>
-            <SearchBar/>
+            <SearchBar small/>
             <button className={`button ${styles['nav-button']}`}>Log In</button>
             <button className={`button ${styles['nav-button']}`}>Sign In</button>
         </div>
