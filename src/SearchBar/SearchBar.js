@@ -6,6 +6,9 @@ export function SearchBar(props) {
     const [location, setLocation] = useState(props.location || '');
 
     function submit(evt) {
+        if (typeof props.search === 'function') {
+            props.search(term, location);
+        }
         console.log('TERM: ', term);
         console.log('LOCATION: ', location);
         evt.preventDefault();

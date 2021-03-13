@@ -10,7 +10,7 @@ export function SearchResult() {
             <div className={styles['business-info']}>
                 <h2 className="subtitle">Brooklyn Boulders</h2>
                 <BusinessRating/>
-                <p>$$ <span className="tag">Rock Climbing</span> <span class="tag">Climbing</span></p>
+                <p>$$ <span className="tag">Rock Climbing</span> <span className="tag">Climbing</span></p>
             </div>
             <div className={styles['contact-info']}> 
                 <p>(347) 834-9066</p>
