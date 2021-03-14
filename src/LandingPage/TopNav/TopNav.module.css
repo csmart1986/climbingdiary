@@ -17,3 +17,16 @@
     margin-left: var(--element-spacing);
 }
 
+.buttonNav {
+    background-color:black;
+    color: white; 
+    width: 90px;
+    height: 40px;
+}
+
+.buttonLog {
+    background-color:black;
+    color: white; 
+    width: 90px;
+    height: 40px;
+}

@@ -26,7 +26,8 @@ export function LandingPage() {
 
             <div>
                 <div id={styles.footer}>
-                    <p></p>
+                    <p>Created by Catherine Martin</p>
+                    <p>2021</p>
                 </div>
             </div>
         </div>
