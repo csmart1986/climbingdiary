@@ -2,7 +2,7 @@
  import queryString from 'query-string';
 
  export function get(path, queryParams) {
-    const query = queryString.stringify(queryString);
+    const query = queryString.stringify(queryParams)
     return fetch(`${API_BASE_URL}${path}?${query}`, {
         headers: {
             Authorization: `Bearer ${BEARER_TOKEN}`,
@@ -10,4 +10,11 @@
             withCredentials: true
         }
     })
+    // console.log(fetch(`${API_BASE_URL}${path}?${query}`, {
+    //     headers: {
+    //         Authorization: `Bearer ${BEARER_TOKEN}`,
+    //         Origin: 'localhost', 
+    //         withCredentials: true
+    //     }
+    // }))
  }
