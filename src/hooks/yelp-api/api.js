@@ -7,7 +7,7 @@
         headers: {
             Authorization: `Bearer ${BEARER_TOKEN}`,
             Origin: 'localhost', 
-            withCredentials:
+            withCredentials: true
         }
     })
  }
