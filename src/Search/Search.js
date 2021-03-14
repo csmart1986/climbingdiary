@@ -7,7 +7,7 @@ import {useBusinessSearch} from '../hooks/yelp-api/useBusinessSearch';
 
 export function Search() {
 
-    const {location} = useReactRouter();
+    const {location, history} = useReactRouter();
     // create new URLSearchParams object
     const params = new URLSearchParams(location.search);
     
@@ -18,6 +18,9 @@ export function Search() {
     const [businesses, amountResults, searchParams, performSearch] = useBusinessSearch(term, locationParam);  // initial values are pulled from query string
     
     function search(term, location) {
+        const encodedTerm = encodeURI(term);
+        const encodedLocation = encodeURI(location);
+        history.push(`/search?find_desc=${encodedTerm}&find_loc=${encodedLocation}`)
         // kick off a new search  (setters in custom headers can only take 1 param so pass an object)
         performSearch({term, location})
     }
