@@ -15,12 +15,21 @@ export function Search() {
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc');
 
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, locationParam);  // initial values are pulled from query string
+    const [businesses, amountResults, searchParams, performSearch] = useBusinessSearch(term, locationParam);  // initial values are pulled from query string
     
+    function search(term, location) {
+        // kick off a new search  (setters in custom headers can only take 1 param so pass an object)
+        performSearch({term, location})
+    }
+
     return (
         <div>
-            <NavBar term={term} location={locationParam}/>
-            <SearchResultsSummary term={term} location={locationParam}/>
+            <NavBar term={term} location={locationParam} search={search}/>
+            <SearchResultsSummary term={searchParams.term} 
+                                  location={searchParams.location} 
+                                  amountResults={amountResults}
+                                  shownResults={businesses ? businesses.length : 0}
+            />
             <SearchResults businesses={businesses}/>
         </div>
     );

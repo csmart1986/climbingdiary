@@ -10,11 +10,4 @@
             withCredentials: true
         }
     })
-    // console.log(fetch(`${API_BASE_URL}${path}?${query}`, {
-    //     headers: {
-    //         Authorization: `Bearer ${BEARER_TOKEN}`,
-    //         Origin: 'localhost', 
-    //         withCredentials: true
-    //     }
-    // }))
  }
