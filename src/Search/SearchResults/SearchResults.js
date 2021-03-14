@@ -7,7 +7,7 @@ export function SearchResults(props) {
         return (<div></div>);
     }
 
-    const searchResults = props.businesses.map(business => <SearchResult key={business.id} businesses={business}/>)
+    const searchResults = props.businesses.map(business => <SearchResult key={business.id} business={business}/>)
     
     return (
         <div className={styles['search-results']}>
