@@ -12,7 +12,7 @@ export function useBusinessSearch(term, location) {
   // need this to do repeated searches
   // setSearchParam initiates a new search every time its called
   const [searchParams, setSearchParams] = useState({term, location});
-
+ 
   useEffect(() => {
       setBusinesses([]);
 
@@ -20,7 +20,9 @@ export function useBusinessSearch(term, location) {
           try {
             console.log('searchParams: ', searchParams)
             const rawData = await api.get('/businesses/search', searchParams);
+            console.log('rawData: ', rawData)
             const res = await rawData.json();
+          
             // put entire businesses array into our local state
             setBusinesses(res.businesses);
             setAmountResults(res.total);

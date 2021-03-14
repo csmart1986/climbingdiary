@@ -14,14 +14,24 @@ export function SearchResult(props) {
     return (
         <div className={styles['search-result']}>
             <img src={business.image_url} alt='business' className={styles['business-image']}/>
+
             <div className={styles['business-info']}>
                 <h2 className="subtitle">{business.name}</h2>
                 <BusinessRating reviewCount={business.reviewCount} rating={business.rating}/>
-                <p><span className="tag">Rock Climbing</span> <span className="tag">Climbing</span></p>
+                <p><span className="tag">Rock Climbing</span> <span className="tag">Climbing</span></p>     
+                <label className={styles.checkbox}>
+                    <input className={styles.input}type="checkbox"/>
+                    Remember me
+                </label>
             </div>
+
             <div className={styles['contact-info']}> 
                 <p>{business.phone}</p>
                 {addressLines}
+            </div>
+
+            <div className={styles.notes}>
+                <textarea class="textarea is-warning" placeholder="Put your gym notes here!"></textarea>
             </div>
         </div>
     );

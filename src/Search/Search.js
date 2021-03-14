@@ -18,7 +18,8 @@ export function Search() {
     const [businesses, amountResults, searchParams, performSearch] = useBusinessSearch(term, locationParam);  // initial values are pulled from query string
     
     //redirect to landing page if leave out 1 or both query params
-    if (!term || !locationParam) {
+    //!term || 
+    if (!locationParam) {
         history.push('/');
     }
 

@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import styles from './SearchBar.module.css';
 
 export function SearchBar(props) {
-    const [term, setTerm] = useState(props.term || '');
+    // const [term, setTerm] = useState(props.term || '');
+    const term = 'climbing gym'
     const [location, setLocation] = useState(props.location || '');
 
     function submit(evt) {
@@ -14,10 +15,12 @@ export function SearchBar(props) {
 
     // if props.small is NOT set, add an is-medium class
     const sizeClass = props.small ? '' : 'is-medium'
+
+        
     return (
         <form onSubmit={submit}>
             <div className="field has-addons">
-                <p className="control">
+                {/* <p className="control">
                     <button className={`button is-static ${sizeClass}`}>Search</button>
                 </p>
                 <p className="control">
@@ -26,7 +29,7 @@ export function SearchBar(props) {
                         type="text" 
                         value={term}
                         placeholder="climbing gym name"/>
-                </p>
+                </p>  */}
                 <div className="control">
                     <div className={`button is-static ${sizeClass}`}>Near</div>
                 </div>

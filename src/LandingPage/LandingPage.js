@@ -20,7 +20,14 @@ export function LandingPage() {
             <div className={styles['search-area']}>
                 <TopNav />
                 <img src={logo} className={styles.logo} alt='logo'/>
+                <div id={styles.intro}>Find local climbing gyms! </div>
                 <SearchBar search={search}/>
+            </div>
+
+            <div>
+                <div id={styles.footer}>
+                    <p></p>
+                </div>
             </div>
         </div>
     );
