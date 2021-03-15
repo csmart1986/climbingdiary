@@ -11546,14 +11546,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "._3eM1TBvMGIf_G9n_TOpYa6 {\n    display: flex; \n    max-width: 1100px;\n    width: 100%;\n    justify-content: space-between;\n}\n\n._2nANS16yS-EwuU_5TugYqi {\n    width: 210px;\n    height: 210px;\n    border-radius: 4px;\n    margin-right: 1rem;\n}\n\n._3ZpzPsTrmKUcwrtyDPMS51 {\n    min-width: 400px;\n}\n\n._3z5cj9GPxlhsSKgEqtro32 p {\n    font-size: .85rem;\n}\n\n._1ul0zrhJfX-yfUFCVMARmK {\n  margin-right: 5px;\n}\n\n", "",{"version":3,"sources":["webpack://./src/Search/SearchResults/SearchResult/SearchResult.module.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,iBAAiB;IACjB,WAAW;IACX,8BAA8B;AAClC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;EACE,iBAAiB;AACnB","sourcesContent":[".search-result {\n    display: flex; \n    max-width: 1100px;\n    width: 100%;\n    justify-content: space-between;\n}\n\n.business-image {\n    width: 210px;\n    height: 210px;\n    border-radius: 4px;\n    margin-right: 1rem;\n}\n\n.business-info {\n    min-width: 400px;\n}\n\n.contact-info p {\n    font-size: .85rem;\n}\n\n.input {\n  margin-right: 5px;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "._3eM1TBvMGIf_G9n_TOpYa6 {\n    display: flex; \n    max-width: 1100px;\n    width: 100%;\n    justify-content: space-between;\n}\n\n._2nANS16yS-EwuU_5TugYqi {\n    width: 210px;\n    height: 210px;\n    border-radius: 4px;\n    margin-right: 1rem;\n}\n\n._3ZpzPsTrmKUcwrtyDPMS51 {\n    min-width: 300px;\n}\n\n._3z5cj9GPxlhsSKgEqtro32 {\n    font-size: .85rem;\n    width: 200px;\n}\n\n._1ul0zrhJfX-yfUFCVMARmK {\n  margin-right: 5px;\n}\n\n.P6ezcXxvcVDHdIv3tZ-QV {\n    width: 300px;\n}\n", "",{"version":3,"sources":["webpack://./src/Search/SearchResults/SearchResult/SearchResult.module.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,iBAAiB;IACjB,WAAW;IACX,8BAA8B;AAClC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,YAAY;AAChB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;IACI,YAAY;AAChB","sourcesContent":[".search-result {\n    display: flex; \n    max-width: 1100px;\n    width: 100%;\n    justify-content: space-between;\n}\n\n.business-image {\n    width: 210px;\n    height: 210px;\n    border-radius: 4px;\n    margin-right: 1rem;\n}\n\n.business-info {\n    min-width: 300px;\n}\n\n.contact-info {\n    font-size: .85rem;\n    width: 200px;\n}\n\n.input {\n  margin-right: 5px;\n}\n\n.notes {\n    width: 300px;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"search-result": "_3eM1TBvMGIf_G9n_TOpYa6",
 	"business-image": "_2nANS16yS-EwuU_5TugYqi",
 	"business-info": "_3ZpzPsTrmKUcwrtyDPMS51",
 	"contact-info": "_3z5cj9GPxlhsSKgEqtro32",
-	"input": "_1ul0zrhJfX-yfUFCVMARmK"
+	"input": "_1ul0zrhJfX-yfUFCVMARmK",
+	"notes": "P6ezcXxvcVDHdIv3tZ-QV"
 };
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -48001,21 +48002,6 @@ function SearchResult(props) {
             ),
             _react2.default.createElement(_BusinessRating.BusinessRating, { reviewCount: business.reviewCount, rating: business.rating }),
             _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                    'span',
-                    { className: 'tag' },
-                    'Rock Climbing'
-                ),
-                ' ',
-                _react2.default.createElement(
-                    'span',
-                    { className: 'tag' },
-                    'Climbing'
-                )
-            ),
-            _react2.default.createElement(
                 'label',
                 { className: _SearchResultModule2.default.checkbox },
                 _react2.default.createElement('input', { className: _SearchResultModule2.default.input, type: 'checkbox' }),
@@ -48035,7 +48021,7 @@ function SearchResult(props) {
         _react2.default.createElement(
             'div',
             { className: _SearchResultModule2.default.notes },
-            _react2.default.createElement('textarea', { 'class': 'textarea is-warning', placeholder: 'Put your gym notes here!' })
+            _react2.default.createElement('textarea', { className: 'textarea is-warning', placeholder: 'Put your gym notes here!' })
         )
     );
 }
@@ -48514,7 +48500,7 @@ var API_BASE_URL = exports.API_BASE_URL = 'https://cors-anywhere.herokuapp.com/h
 
 // REMOVE THIS TOKEN 
 // if token is saved in FE, this application is not production ready!  
-var BEARER_TOKEN = exports.BEARER_TOKEN = 'e2FcPyPmtRCNqgKBncgkV4SHMaJccHHLA20b8jogEuNLUd-5Mw75ckWpOBf4VUS_Ax74JBox3_7lJAR7Kov2NEE8MwzNkHK9Z-iKT7ImFAgQIRvaTW6lt6X9EpxNYHYx';
+var BEARER_TOKEN = exports.BEARER_TOKEN = '';
 
 /***/ }),
 

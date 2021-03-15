@@ -13,14 +13,18 @@
 }
 
 .business-info {
-    min-width: 400px;
+    min-width: 300px;
 }
 
-.contact-info p {
+.contact-info {
     font-size: .85rem;
+    width: 200px;
 }
 
 .input {
   margin-right: 5px;
 }
 
+.notes {
+    width: 300px;
+}
