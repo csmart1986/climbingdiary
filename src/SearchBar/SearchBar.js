@@ -38,7 +38,7 @@ export function SearchBar(props) {
                         onChange={(evt)  =>  setLocation(evt.target.value)}
                         type="text" 
                         value={location}
-                        placeholder="Where"/>
+                        placeholder="city"/>
                 </p>
                 <div className={`button ${sizeClass} ${styles['search-button']}`} onClick={submit}>
                     <span className="icon is-small"><i className="fas fa-search"></i></span>

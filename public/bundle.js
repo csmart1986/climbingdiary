@@ -11451,7 +11451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".Vq3rqcbnuFHzhYMAlifG_ {\n    width: 350px;\n    height: 300px; \n    margin: 50px 0;\n}\n\n.Cu64h3qPlZ8743cGOpZ8 {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n._19UC1WtYUEzWszM3vsFh4l {\n    display: flex;\n    justify-content: center;\n}\n\n#_2sOWuJ7wedmf7HU2eLpliS {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    margin-top: auto;\n    width: 100%;\n    /* background-color: grey; */\n    background-color: rgb(76, 28, 110);\n    color: rgb(218, 197, 81); \n    height: 100px;\n  }\n\n  #_16vadZov8Td0LDWgQ4qQro {\n      font-size: 1.5rem;\n      margin-bottom: 20px;\n  }\n  #Z6KUxlH5Cfgw9K48LA1yV {\n      display: flex;\n      justify-content: center;\n      margin: 12px;\n  }", "",{"version":3,"sources":["webpack://./src/LandingPage/LandingPage.module.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;IAClB,OAAO;IACP,SAAS;IACT,QAAQ;IACR,gBAAgB;IAChB,WAAW;IACX,4BAA4B;IAC5B,kCAAkC;IAClC,wBAAwB;IACxB,aAAa;EACf;;EAEA;MACI,iBAAiB;MACjB,mBAAmB;EACvB;EACA;MACI,aAAa;MACb,uBAAuB;MACvB,YAAY;EAChB","sourcesContent":[".logo {\n    width: 350px;\n    height: 300px; \n    margin: 50px 0;\n}\n\n.search-area {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.landing {\n    display: flex;\n    justify-content: center;\n}\n\n#footer {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    margin-top: auto;\n    width: 100%;\n    /* background-color: grey; */\n    background-color: rgb(76, 28, 110);\n    color: rgb(218, 197, 81); \n    height: 100px;\n  }\n\n  #intro {\n      font-size: 1.5rem;\n      margin-bottom: 20px;\n  }\n  #author {\n      display: flex;\n      justify-content: center;\n      margin: 12px;\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".Vq3rqcbnuFHzhYMAlifG_ {\n    width: 350px;\n    height: 300px; \n    margin: 50px 0;\n}\n\n.Cu64h3qPlZ8743cGOpZ8 {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n._19UC1WtYUEzWszM3vsFh4l {\n    display: flex;\n    justify-content: center;\n}\n\n#_2sOWuJ7wedmf7HU2eLpliS {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    margin-top: auto;\n    width: 100%;\n    /* background-color: grey; */\n    background-color: rgb(76, 28, 110);\n    color: rgb(218, 197, 81); \n    height: 100px;\n  }\n\n  #_16vadZov8Td0LDWgQ4qQro {\n      font-size: 1.5rem;\n      margin-bottom: 20px;\n  }\n\n  #_16FIGZ2uUDOX3FggvY7OJ9 {\n    font-size: 1.5rem;\n    margin-top: 40px;\n  }\n\n  #Z6KUxlH5Cfgw9K48LA1yV {\n      display: flex;\n      justify-content: center;\n      margin: 12px;\n  }", "",{"version":3,"sources":["webpack://./src/LandingPage/LandingPage.module.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;IAClB,OAAO;IACP,SAAS;IACT,QAAQ;IACR,gBAAgB;IAChB,WAAW;IACX,4BAA4B;IAC5B,kCAAkC;IAClC,wBAAwB;IACxB,aAAa;EACf;;EAEA;MACI,iBAAiB;MACjB,mBAAmB;EACvB;;EAEA;IACE,iBAAiB;IACjB,gBAAgB;EAClB;;EAEA;MACI,aAAa;MACb,uBAAuB;MACvB,YAAY;EAChB","sourcesContent":[".logo {\n    width: 350px;\n    height: 300px; \n    margin: 50px 0;\n}\n\n.search-area {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.landing {\n    display: flex;\n    justify-content: center;\n}\n\n#footer {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    margin-top: auto;\n    width: 100%;\n    /* background-color: grey; */\n    background-color: rgb(76, 28, 110);\n    color: rgb(218, 197, 81); \n    height: 100px;\n  }\n\n  #intro {\n      font-size: 1.5rem;\n      margin-bottom: 20px;\n  }\n\n  #intro2 {\n    font-size: 1.5rem;\n    margin-top: 40px;\n  }\n\n  #author {\n      display: flex;\n      justify-content: center;\n      margin: 12px;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"logo": "Vq3rqcbnuFHzhYMAlifG_",
@@ -11459,6 +11459,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"landing": "_19UC1WtYUEzWszM3vsFh4l",
 	"footer": "_2sOWuJ7wedmf7HU2eLpliS",
 	"intro": "_16vadZov8Td0LDWgQ4qQro",
+	"intro2": "_16FIGZ2uUDOX3FggvY7OJ9",
 	"author": "Z6KUxlH5Cfgw9K48LA1yV"
 };
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
@@ -47639,9 +47640,14 @@ function LandingPage() {
             _react2.default.createElement(
                 'div',
                 { id: _LandingPageModule2.default.intro },
-                'Find local climbing gyms! '
+                'Find the local climbing gyms... '
             ),
-            _react2.default.createElement(_SearchBar.SearchBar, { search: search })
+            _react2.default.createElement(_SearchBar.SearchBar, { search: search }),
+            _react2.default.createElement(
+                'div',
+                { id: _LandingPageModule2.default.intro2 },
+                'And keep track of your climbs! '
+            )
         ),
         _react2.default.createElement(
             'div',
@@ -48326,7 +48332,7 @@ function SearchBar(props) {
                     },
                     type: 'text',
                     value: location,
-                    placeholder: 'Where' })
+                    placeholder: 'city' })
             ),
             _react2.default.createElement(
                 'div',
@@ -48500,7 +48506,7 @@ var API_BASE_URL = exports.API_BASE_URL = 'https://cors-anywhere.herokuapp.com/h
 
 // REMOVE THIS TOKEN 
 // if token is saved in FE, this application is not production ready!  
-var BEARER_TOKEN = exports.BEARER_TOKEN = '';
+var BEARER_TOKEN = exports.BEARER_TOKEN = 'e2FcPyPmtRCNqgKBncgkV4SHMaJccHHLA20b8jogEuNLUd-5Mw75ckWpOBf4VUS_Ax74JBox3_7lJAR7Kov2NEE8MwzNkHK9Z-iKT7ImFAgQIRvaTW6lt6X9EpxNYHYx';
 
 /***/ }),
 
