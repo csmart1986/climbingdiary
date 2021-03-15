@@ -19,7 +19,7 @@ const seed = async () => {
 
     // Note
     const notes = [
-      {businessId: "8b4xgDOH4bextUIFJ-megw", note: "blahhhh", visited: true, userId: 1}
+      {businessId: "8b4xgDOH4bextUIFJ-megw", note: "Here are my notes for Brooklyn Boulders!", visited: true, userId: 1}
       
     ];
     const [note1] = await Note.bulkCreate(notes);

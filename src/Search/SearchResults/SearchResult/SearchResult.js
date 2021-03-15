@@ -21,7 +21,7 @@ export function SearchResult(props) {
                 <p><span className="tag">Rock Climbing</span> <span className="tag">Climbing</span></p>     
                 <label className={styles.checkbox}>
                     <input className={styles.input}type="checkbox"/>
-                    Remember me
+                    I've been here!
                 </label>
             </div>
 
