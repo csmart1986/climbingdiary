@@ -1,6 +1,6 @@
 const User = require('./user');
 const Note = require('./note');
-const Gym = require('/gym');
+const Gym = require('./gym');
 
 // ASSOCIATIONS
 Note.belongsTo(User);

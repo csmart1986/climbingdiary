@@ -11,6 +11,8 @@
     "chalk": "^2.4.1",
     "css-loader": "^5.1.2",
     "express": "^4.14.0",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
     "pg": "^8.3.0",
     "query-string": "^6.14.1",
     "react": "^17.0.1",
@@ -30,7 +32,7 @@
   },
   "scripts": {
     "start-dev": "npm run build-watch & npm run start-server",
-    "start-server": "nodemon main.js -e html,js,css --ignore public",
+    "start-server": "nodemon server",
     "build-watch": "webpack -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
