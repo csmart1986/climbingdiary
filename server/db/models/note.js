@@ -1,18 +1,18 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
-console.log(db)
+
 const Note = db.define('note', {
-  businessId: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  note: {
+  noteBody: {
     type: Sequelize.TEXT,
-    defaultValue: ''
+    allowNull: false,
   },
-  visited: {
-    type: Sequelize.BOOLEAN,
-    defaultValue: false
+  date:  {
+    type: Sequelize.DATEONLY,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+      isDate: true,
+    },
   },
 })
 
