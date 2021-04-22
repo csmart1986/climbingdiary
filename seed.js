@@ -1,47 +1,70 @@
-const { green, red } = require("chalk");
+
 const db  = require("./server/db");
 
 
-const User = require('./server/db/models/user');
-const Note = require('./server/db/models/note');
+const { User, Note, Gym } = require('./server/db/models');
 
-const seed = async () => {
-  try {
-    await db.sync({ force: true });
+
+async function seed() {
+    db.sync({ force: true });
 
     // seed your database here!
 
     // User
     const users = [
-      {firstName: 'Catherine', lastName: 'Martin', email: 'cathysue86@gmail.com', password: 'test'},
+      {
+        firstName: 'Catherine',
+        lastName: 'Martin',
+        email: 'cathysue86@gmail.com',
+        username: 'csmart',
+        password: 'test'
+      },
     ];
-    const [ catherine ] = await User.bulkCreate(users);
+    const [ catherine ] = await User.bulkCreate(users, {returning: true});
 
     // Note
     const notes = [
-      {businessId: "8b4xgDOH4bextUIFJ-megw", note: "Here are my notes for Brooklyn Boulders!", visited: true, userId: 1}
-      
+      {
+        businessId: "8b4xgDOH4bextUIFJ-megw",
+        date: '2021-04-09',
+        note: "Here are my notes for Brooklyn Boulders!",
+        userId: 1
+      } 
     ];
     const [note1] = await Note.bulkCreate(notes);
 
+    // Gym
+    const gyms = [
+      {
+        businessId: "8b4xgDOH4bextUIFJ-megw", 
+        userId: 1
+      } 
+    ];
+    const [gym1] = await Gym.bulkCreate(gyms);
+};
+
+
+// We've separated the `seed` function from the `runSeed` function.
+async function runSeed() {
+  console.log('seeding...');
+  try {
+    await seed();
   } catch (err) {
-    console.log(red(err));
+    console.error(err);
+    process.exitCode = 1;
+  } finally {
+    console.log('closing db connection');
+    await db.close();
+    console.log('db connection closed');
   }
 };
 
+// Execute the `seed` function, IF we ran this module directly (`node seed`).
+// `Async` functions always return a promise, so we can use `catch` to handle
+// any errors that might occur inside of `seed`.
+
+if (module === require.main) {
+  runSeed();
+};
+
 module.exports = seed;
-// If this module is being required from another module, then we just export the
-// function, to be used as necessary. But it will run right away if the module
-// is executed directly (e.g. `node seed.js` or `npm run seed`)
-if (require.main === module) {
-  seed()
-    .then(() => {
-      console.log(green("Seeding success!"));
-      db.close();
-    })
-    .catch(err => {
-      console.error(red("Oh noes! Something went wrong!"));
-      console.error(err);
-      db.close();
-    });
-}
