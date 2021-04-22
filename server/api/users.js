@@ -1,8 +1,8 @@
-// ROUTE TO SERVE UP ALL USERS
+// USER API ROUTES
 
 const router = require("express").Router();
 // import models
-const { User, Note} = require('../db/index');
+const { User, Note, Gym } = require('../db/index');
 
 // GET /api/users
 router.get('/', async (req, res, next) => {
