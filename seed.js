@@ -6,7 +6,7 @@ const { User, Note, Gym } = require('./server/db/models');
 
 
 async function seed() {
-    db.sync({ force: true });
+    await db.sync({ force: true });
 
     // seed your database here!
 
@@ -27,8 +27,8 @@ async function seed() {
       {
         businessId: "8b4xgDOH4bextUIFJ-megw",
         date: '2021-04-09',
-        note: "Here are my notes for Brooklyn Boulders!",
-        userId: 1
+        noteBody: "Here are my notes for Brooklyn Boulders!",
+        userId: 1,
       } 
     ];
     const [note1] = await Note.bulkCreate(notes);

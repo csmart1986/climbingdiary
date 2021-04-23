@@ -8,9 +8,6 @@ User.hasMany(Note);
 
 User.hasMany(Gym);
 
-Note.belongsTo(Gym);
-Gym.hasMany(Note);
-
 module.exports = {
   User,
   Note, 
