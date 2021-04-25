@@ -1,7 +1,7 @@
 import React from 'react';
 import {SearchResult} from './SearchResult/SearchResult';
 import styles from './SearchResults.module.css';
-import {Spinner} from '../../components/Spinner/Spinner';
+import {Spinner} from '../../Spinner/Spinner';
 
 export function SearchResults(props) {
     // show spinner if loading
