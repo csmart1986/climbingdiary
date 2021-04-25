@@ -1,76 +1,47 @@
 {
-  "name": "climbingdiary",
-  "version": "0.1.0",
-  "private": true,
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "scripts/deploy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seed.js",
+    "start-dev": "webpack -w & nodemon server/startServer.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": ">=0.21.1",
-    "bulma": "^0.9.2",
-    "chalk": "^2.4.1",
-    "css-loader": "^5.1.2",
-    "express": "^4.14.0",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.3.4",
+    "chalk": "^2.4.2",
+    "connect-session-sequelize": "^7.1.1",
+    "css-loader": "^5.1.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "lodash": "^4.17.21",
+    "mocha": "^8.3.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
     "passport": "^0.4.1",
-    "pg": "^8.3.0",
-    "query-string": "^6.14.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-rating": "^2.0.5",
+    "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "redux": "^4.0.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0",
-    "sequelize": "^6.5.1",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^6.6.0",
     "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1",
-    "use-react-router": "^1.0.7",
-    "volleyball": "^1.5.1",
-    "web-vitals": "^1.1.0"
-  },
-  "scripts": {
-    "start-dev": "npm run build-watch & npm run start-server",
-    "start-server": "nodemon server",
-    "build-watch": "webpack -w",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "seed": "node seed.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "file-loader": "^6.2.0",
-    "nodemon": "^1.18.10",
-    "volleyball": "^1.5.1",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "webpack": "^5.27.1",
+    "webpack-cli": "^4.5.0"
   }
 }

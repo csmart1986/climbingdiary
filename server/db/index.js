@@ -1,6 +1,13 @@
+// establish connection to database
 const db = require('./db')
 
-// register models
-require('./models')
+// import all Models from relevant files
+const User = require('./User')
 
-module.exports = db
+// establish relationships between models
+
+
+module.exports = { 
+    db, 
+    User
+}
