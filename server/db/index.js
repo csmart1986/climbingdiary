@@ -1,13 +1,20 @@
 // establish connection to database
-const db = require('./db')
+const db = require('./db');
 
 // import all Models from relevant files
-const User = require('./User')
+const User = require('./user');
+const Note = require('./note');
+const Gym = require('./gym');
 
-// establish relationships between models
+// Associations - establish relationships between models
+Note.belongsTo(User);
+User.hasMany(Note);
 
+User.hasMany(Gym);
 
 module.exports = { 
     db, 
-    User
+    User, 
+    Note, 
+    Gym
 }
