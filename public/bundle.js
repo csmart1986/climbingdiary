@@ -1938,12 +1938,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _reducer1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducer1 */ "./client/store/reducer1.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _reducer1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reducer1 */ "./client/store/reducer1.js");
 
 
-var primaryReducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  key1: _reducer1__WEBPACK_IMPORTED_MODULE_1__.default
+var primaryReducer = (0,redux__WEBPACK_IMPORTED_MODULE_1__.combineReducers)({
+  key1: _reducer1__WEBPACK_IMPORTED_MODULE_0__.default
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (primaryReducer);
 
