@@ -11,6 +11,7 @@ import '../public/index.css'
 ReactDOM.render(
   <Provider store={store}>
     <div>Placeholder for initial content</div>
+    {/* <img className="main-icon" src="../public/logo.png" /> */}
   </Provider>,
   document.getElementById('app')
 );
