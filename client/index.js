@@ -6,7 +6,7 @@ import App from './app';
 
 // Webpack will take this css file and include it in the build
 // style-related loaders were defined in webpack.config.js
-import '../public/index.css'
+import '../public/style.css'
 
 // Provider is needed to wrap the rest of the application and give access to Redux Store
 ReactDOM.render(
