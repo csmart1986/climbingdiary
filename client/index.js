@@ -11,7 +11,7 @@ import '../public/style.css'
 // Provider is needed to wrap the rest of the application and give access to Redux Store
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+      <App />
   </Provider>,
   document.getElementById('app')
 );
