@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './store'
+import store from './store';
+import App from './app';
 
 // Webpack will take this css file and include it in the build
 // style-related loaders were defined in webpack.config.js
@@ -10,8 +11,7 @@ import '../public/index.css'
 // Provider is needed to wrap the rest of the application and give access to Redux Store
 ReactDOM.render(
   <Provider store={store}>
-    <div>Placeholder for initial content</div>
-    <img className="main-icon" src="logo.png" />
+    <App />
   </Provider>,
   document.getElementById('app')
 );

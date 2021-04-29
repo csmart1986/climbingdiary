@@ -1,0 +1,1 @@
+<img className="main-icon" src="logo.png" />
