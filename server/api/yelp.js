@@ -12,7 +12,7 @@ export function getAllGyms(path, queryParams) {
     const query = queryString.stringify(queryParams)
     return fetch(`${API_BASE_URL}${path}?${query}`, {
         headers: {
-            Authorization: `Bearer ${YELP_API}`,
+            Authorization: process.env.YELP_API,
             Origin: 'localhost', 
             withCredentials: true
         }
