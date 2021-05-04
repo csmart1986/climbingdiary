@@ -5,7 +5,6 @@
 //https://api.yelp.com/v3/businesses/8b4xgDOH4bextUIFJ-megw
 
 const axios = require('axios');
-// get dotevn library => allow you to use process.env variables (variables in .env file) like on production server
 
 const businessId = "8b4xgDOH4bextUIFJ-megw";
 const endpoint = "https://api.yelp.com/v3/businesses/";
