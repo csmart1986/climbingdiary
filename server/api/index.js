@@ -7,7 +7,8 @@ const router = require('express').Router();
 // router.use('/users', require('./users'));
 
 // process an individual GET, POST, PUT, or DELETE route
-router.use('/yelp', async (req, res, next) => {
+
+router.get('/yelp', async (req, res, next) => {
     try {
         let data = await getAllGyms('San Francisco');
         res.send(data);
@@ -17,7 +18,7 @@ router.use('/yelp', async (req, res, next) => {
     }
 });
 
-router.use('/yelp/:id', async (req, res, next) => {
+router.get('/yelp/:id', async (req, res, next) => {
     try {
         const yelpGymId = "8b4xgDOH4bextUIFJ-megw" //req.params.id;
         let data = await getSingleGym(yelpGymId);

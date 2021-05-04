@@ -1,0 +1,6 @@
+PORT = 3000
+DATABASE_URL = 'postgres://localhost:5432/climbingdiary'
+YELP_API = 'e2FcPyPmtRCNqgKBncgkV4SHMaJccHHLA20b8jogEuNLUd-5Mw75ckWpOBf4VUS_Ax74JBox3_7lJAR7Kov2NEE8MwzNkHK9Z-iKT7ImFAgQIRvaTW6lt6X9EpxNYHYx'
+
+
+
