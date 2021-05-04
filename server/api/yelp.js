@@ -9,7 +9,7 @@ const axios = require('axios');
 const businessId = "8b4xgDOH4bextUIFJ-megw";
 const endpoint = "https://api.yelp.com/v3/businesses/";
 
-// 
+// GET ALL GYMS FROM YELP
 const getAllGyms = async(location) => {
     try {
         const { data } = await axios.get(
@@ -27,4 +27,23 @@ const getAllGyms = async(location) => {
         console.log(err);
     }
 }
-module.exports = { getAllGyms }
+
+// GET SINGLE GYM FROM YELP USING YELP BUSINESS ID 
+const getSingleGym = async(id) => {
+    try {
+        const { data } = await axios.get(
+            `${endpoint}${id}`, 
+            {
+                headers: {
+                    Authorization: `Bearer ${process.env.YELP_API}`
+                }
+            }
+        
+        )
+        return data;
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+module.exports = { getAllGyms, getSingleGym }

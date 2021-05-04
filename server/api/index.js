@@ -1,4 +1,4 @@
-const { getAllGyms } = require('./yelp');
+const { getAllGyms, getSingleGym } = require('./yelp');
 const router = require('express').Router();
 
 // all routes automatically start with /api to be routed here
@@ -10,6 +10,17 @@ const router = require('express').Router();
 router.use('/yelp', async (req, res, next) => {
     try {
         let data = await getAllGyms('San Francisco');
+        res.send(data);
+    }
+    catch (error) {
+        next(error);
+    }
+});
+
+router.use('/yelp/:id', async (req, res, next) => {
+    try {
+        const yelpGymId = "8b4xgDOH4bextUIFJ-megw" //req.params.id;
+        let data = await getSingleGym(yelpGymId);
         res.send(data);
     }
     catch (error) {
