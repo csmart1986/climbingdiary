@@ -18,8 +18,7 @@ const getAllGyms = async(location) => {
                 headers: {
                     Authorization: `Bearer ${process.env.YELP_API}`
                 }
-            }
-        
+            }  
         )
         return data;
     }
@@ -37,8 +36,7 @@ const getSingleGym = async(id) => {
                 headers: {
                     Authorization: `Bearer ${process.env.YELP_API}`
                 }
-            }
-        
+            }        
         )
         return data;
     }

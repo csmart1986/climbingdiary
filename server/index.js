@@ -40,6 +40,6 @@ app.use(function (err, req, res) {
     console.error('Server routing error ==>', err);
     console.error('Server routing error ==>', err.stack);
     res.status(err.status || 500).send(err.message || 'Internal server error.');
-  })
+});
 
-module.exports = app
+module.exports = app;
