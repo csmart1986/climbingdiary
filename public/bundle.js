@@ -1961,6 +1961,16 @@ var App = function App() {
 
 /***/ }),
 
+/***/ "./client/components/AllGyms.js":
+/*!**************************************!*\
+  !*** ./client/components/AllGyms.js ***!
+  \**************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./client/components/Footer.js":
 /*!*************************************!*\
   !*** ./client/components/Footer.js ***!
@@ -2061,7 +2071,7 @@ var SearchBar = function SearchBar(_ref) {
     border: "none",
     padding: "0.5rem"
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     style: BarStyling,
     value: location,
     placeholder: "enter city" //  when input changes in searchbar, update search location with new input
@@ -2069,7 +2079,10 @@ var SearchBar = function SearchBar(_ref) {
     onChange: function onChange(e) {
       return updateLocation(e.target.value);
     }
-  });
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "search",
+    type: "submit"
+  }, "Search"));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchBar);
@@ -2090,6 +2103,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/HomePage */ "./client/components/HomePage.js");
+/* harmony import */ var _components_AllGyms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/AllGyms */ "./client/components/AllGyms.js");
+/* harmony import */ var _components_AllGyms__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_AllGyms__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

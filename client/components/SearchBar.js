@@ -7,14 +7,21 @@ import React from 'react';
 const SearchBar = ({location, updateLocation}) => {
   
   const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
+
   return (
-    <input 
-     style={BarStyling}
-     value={location}
-     placeholder={"enter city"}
-    //  when input changes in searchbar, update search location with new input
-     onChange={(e) => updateLocation(e.target.value)}
-    />
+    <div>
+      <input 
+      style={BarStyling}
+      value={location}
+      placeholder={"enter city"}
+      //  when input changes in searchbar, update search location with new input
+      onChange={(e) => updateLocation(e.target.value)}
+      />
+      <button className='search' type='submit'>
+        Search
+      </button>
+  </div>
+    
   );
 }
 

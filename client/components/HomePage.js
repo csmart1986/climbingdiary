@@ -9,7 +9,7 @@ export const HomePage = (props) => {
     const updateLocation = (input) => {
         setLocation(input)
     };
-
+    
     return (
         <div id="homePage">
             <img className="main-icon" src="logo.png" />
