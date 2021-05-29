@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import { HomePage } from './components/HomePage';
 import { AllGyms } from './components/AllGyms';
 
@@ -8,11 +8,12 @@ import { AllGyms } from './components/AllGyms';
  */
 function Routes() {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path ='/' component={HomePage} />
-            </Switch>
-        </BrowserRouter>
+
+        <Switch>
+            <Route exact path ='/' component={HomePage} />
+            <Route exact path='/allgyms' component={AllGyms} />
+        </Switch>
+
     )
 }
 

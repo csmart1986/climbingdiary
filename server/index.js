@@ -23,16 +23,17 @@ app.use(express.static(path.join(__dirname, '../public')))
 // direct API calls to the api folder (which needs an index.js)
 app.use('/api', require('./api'))
 
+
+// serve the index.html file for non-specific requests
+app.get('*', function (req, res, next) {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
 // 404 handling
 app.use(function (req, res, next) {
     const err = new Error('Route not found.');
     err.status = 404;
     next(err);
-});
-
-// serve the index.html file for non-specific requests
-app.get('*', function (req, res, next) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // error handlng
