@@ -1,10 +1,10 @@
 
-const db  = require("./server/db");
+const {db}  = require("./server/db");
 
 
-const { User, Note, Gym } = require('./server/db/models');
+const { User, Note, Gym } = require('./server/db/index');
 
-
+console.log("db:", db)
 async function seed() {
     await db.sync({ force: true });
 
@@ -29,7 +29,13 @@ async function seed() {
         date: '2021-04-09',
         noteBody: "Here are my notes for Brooklyn Boulders!",
         userId: 1,
-      } 
+      },
+      {
+        businessId: "qk4sGfV2DQQs1Pe0k54-fA",
+        date: '2021-04-09',
+        noteBody: "Here are my notes for Planet Granite!",
+        userId: 1,
+      },
     ];
     const [note1] = await Note.bulkCreate(notes);
 
@@ -37,6 +43,10 @@ async function seed() {
     const gyms = [
       {
         businessId: "8b4xgDOH4bextUIFJ-megw", 
+        userId: 1
+      }, 
+      {
+        businessId: 'qk4sGfV2DQQs1Pe0k54-fA',
         userId: 1
       } 
     ];

@@ -20,6 +20,7 @@ class SearchBar extends Component {
       await axios.post(
         `http://localhost:3000/api/gyms`, {location: this.state.location}
       )
+      // return something
     } catch (error) {
       console.log(error)
     }
