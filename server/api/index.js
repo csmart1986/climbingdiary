@@ -8,9 +8,10 @@ const router = require('express').Router();
 
 // process an individual GET, POST, PUT, or DELETE route
 
-router.get('/yelp', async (req, res, next) => {
+router.post('/gyms', async (req, res, next) => {
     try {
-        let data = await getAllGyms('San Francisco');
+        let data = await getAllGyms(req.body.location);
+        console.log('REQ BODY: ',req.body.location)
         res.send(data);
     }
     catch (error) {
@@ -18,7 +19,7 @@ router.get('/yelp', async (req, res, next) => {
     }
 });
 
-router.get('/yelp/:id', async (req, res, next) => {
+router.get('/gyms/:id', async (req, res, next) => {
     try {
         const yelpGymId = "8b4xgDOH4bextUIFJ-megw" //req.params.id;
         let data = await getSingleGym(yelpGymId);

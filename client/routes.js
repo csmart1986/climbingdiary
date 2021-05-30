@@ -12,6 +12,7 @@ function Routes() {
         <Switch>
             <Route exact path ='/' component={HomePage} />
             <Route exact path='/allgyms' component={AllGyms} />
+            
         </Switch>
 
     )

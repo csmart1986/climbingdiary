@@ -1,28 +1,59 @@
 // create SearchBar functional component
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
-// pass location and setLocation as props from parent component, HomePage
-    // location => assigned value of input location
-    // setLocation => fx that handles the change event of location being entered into search bar
-const SearchBar = ({location, updateLocation}) => {
+class SearchBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+        location: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.getGyms = this.getGyms.bind(this);
+  };
   
-  const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
+  // get all gyms at specific location
+  getGyms = async (location) => {
+    try {
+      console.log(this.state.location)
+      await axios.post(
+        `http://localhost:3000/api/gyms`, {location: this.state.location}
+      )
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
-  return (
-    <div>
-      <input 
-      style={BarStyling}
-      value={location}
-      placeholder={"enter city"}
-      //  when input changes in searchbar, update search location with new input
-      onChange={(e) => updateLocation(e.target.value)}
-      />
-      <button className='search' type='submit'>
-        Search
-      </button>
-  </div>
-    
-  );
+  handleChange(e) {
+    this.setState({
+      location: e.target.value,
+    })
+  };
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({
+      location: this.state.location
+    })
+    const gyms = this.getGyms(this.state.location);
+    console.log('GYMS: ',gyms)
+  };
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input type='text'
+            name='enter city'
+            onChange={this.handleChange}
+            value={this.state.location}
+          />
+          <button type='submit'>Search</button>
+        </form>
+      </div>
+    ) 
+  }
 }
 
-export default SearchBar
+export default SearchBar;

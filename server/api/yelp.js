@@ -12,14 +12,17 @@ const endpoint = "https://api.yelp.com/v3/businesses/";
 // GET ALL GYMS FROM YELP
 const getAllGyms = async(location) => {
     try {
-        const { data } = await axios.get(
-            `${endpoint}search?term='climbing gym'&location=${location}`, 
+        const { data, status } = await axios.get(
+            `${endpoint}search?term='climbing gym'&location='${location}'`, 
             {
                 headers: {
                     Authorization: `Bearer ${process.env.YELP_API}`
                 }
             }  
         )
+        console.log('STATUS: ', status)
+        console.log('DATA: ', data)
+        console.log('url: ', `${endpoint}search?term='climbing gym'&location='${location}'`)
         return data;
     }
     catch (err) {
