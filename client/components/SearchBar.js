@@ -16,7 +16,6 @@ class SearchBar extends Component {
   // get all gyms at specific location
   getGyms = async (location) => {
     try {
-      console.log(this.state.location)
       await axios.post(
         `http://localhost:3000/api/gyms`, {location: this.state.location}
       )
@@ -38,7 +37,6 @@ class SearchBar extends Component {
       location: this.state.location
     })
     const gyms = this.getGyms(this.state.location);
-    console.log('GYMS: ',gyms)
   };
 
   render() {
