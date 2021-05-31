@@ -13,22 +13,25 @@ const endpoint = "https://api.yelp.com/v3/businesses/";
 
 // GET ALL GYM NOTES that belong to logged in user 
 const getNotes = async (businesses) => {
+    // pull out the businessId for each gym and add value to businessIdArr
     const businessIdArr = [];
     businesses.forEach(businessObj => {
         businessIdArr.push(businessObj['id'])
     })
     try {
+        // get the user's notes for only the gyms that are found in the gym array  
         const notes = await Note.findAll({
             where: {
                 businessId: {[Op.in]: businessIdArr}
             }
         })
         console.log('notes: ', notes)
+        // if no notes are found for the gyms in the gym list... 
         if (notes.length < 1) {
             console.log('You have no notes created for gyms in this location')
         }
         else {
-           res.send(notes);
+           return notes;
         }
     }
     catch (error) {
@@ -49,7 +52,7 @@ const getAllGyms = async(location) => {
             }  
         )
         // get all notes by logged in user for returned gyms list
-        getNotes(data.businesses);
+        const gymNotes = getNotes(data.businesses);
         return data.businesses;
     }
     catch (err) {
