@@ -1,6 +1,10 @@
 // create SearchBar functional component
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import { connect } from 'react-redux';
+
+// import thunk
+import { getGyms } from '../store/gyms';
 
 class SearchBar extends Component {
   constructor() {
@@ -10,21 +14,21 @@ class SearchBar extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.getGyms = this.getGyms.bind(this);
+    // this.getGyms = this.getGyms.bind(this);
   };
   
   // get all gyms/notes at specific location
-  getGyms = async (location) => {
-    try {
-      const allGyms = await axios.post(
-        `http://localhost:3000/api/gyms`, {location: this.state.location}
-      )
-      console.log('ALL GYMS: ',allGyms)
-      return allGyms
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // getGyms = async (location) => {
+  //   try {
+  //     const allGyms = await axios.post(
+  //       `http://localhost:3000/api/gyms`, {location: this.state.location}
+  //     )
+  //     console.log('ALL GYMS: ',allGyms)
+  //     return allGyms
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
   handleChange(e) {
     this.setState({
@@ -37,8 +41,8 @@ class SearchBar extends Component {
     this.setState({
       location: this.state.location
     })
-    const gyms = await this.getGyms(this.state.location);
-    console.log('handleSubmit: ', gyms)
+    // const gyms = await this.getGyms(this.state.location);
+    this.props.fetchGyms(this.state.location);
     // this.setState({
     //   location:'' 
     // })
@@ -61,4 +65,16 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+const mapState = state => {
+  return {
+    gyms: state.gyms.all,
+  }
+};
+
+const mapDispatch = dispatch => {
+  return {
+    fetchGyms: (location) => dispatch(getGyms(location))
+  };
+}
+
+export default connect(mapState, mapDispatch)(SearchBar);

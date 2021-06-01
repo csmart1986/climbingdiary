@@ -18,7 +18,7 @@ export const getGyms = (location) => async(dispatch) => {
   try {
     // make API call to get all gyms/notes at specific location
     const allGyms = await axios.post(
-      `http://localhost:3000/api/gyms`, {location: this.state.location}
+      `http://localhost:3000/api/gyms`, location
     )
     // Dispatch action to reducer to update state
     dispatch(receivedGyms(allGyms));
