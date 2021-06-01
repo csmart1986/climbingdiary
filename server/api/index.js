@@ -1,4 +1,4 @@
-const { getAllGyms, getSingleGym } = require('./yelpAllGyms');
+const { combineNotesGyms } = require('./yelpAllGyms');
 const router = require('express').Router();
 
 // all routes automatically start with /api to be routed here
@@ -10,7 +10,8 @@ const router = require('express').Router();
 
 router.post('/gyms', async (req, res, next) => {
     try {
-        let data = await getAllGyms(req.body.location);
+        let data = await combineNotesGyms(req.body.location);
+        console.log('DATA: ',data[0])
         res.send(data);
     }
     catch (error) {

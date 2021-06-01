@@ -12,7 +12,7 @@ const businessId = "8b4xgDOH4bextUIFJ-megw";
 const endpoint = "https://api.yelp.com/v3/businesses/";
 
 // GET ALL GYM NOTES that belong to logged in user 
-const getNotes = async (businesses) => {
+const getNotes = (businesses) => {
     // pull out the businessId for each gym and add value to businessIdArr
     const businessIdArr = [];
     businesses.forEach(businessObj => {
@@ -20,15 +20,15 @@ const getNotes = async (businesses) => {
     })
     try {
         // get the user's notes for only the gyms that are found in the gym array  
-        const notes = await Note.findAll({
+        const notes = Note.findAll({
             where: {
                 businessId: {[Op.in]: businessIdArr}
             }
         })
-        console.log('notes: ', notes)
+        // console.log('notes: ', notes)
         // if no notes are found for the gyms in the gym list... 
         if (notes.length < 1) {
-            console.log('You have no notes created for gyms in this location')
+            return 'You have no notes created for gyms in this location'
         }
         else {
            return notes;
@@ -51,8 +51,7 @@ const getAllGyms = async(location) => {
                 }
             }  
         )
-        // get all notes by logged in user for returned gyms list
-        const gymNotes = getNotes(data.businesses);
+        if (data.businesses.length < 1) return 'No gyms found'
         return data.businesses;
     }
     catch (err) {
@@ -60,6 +59,25 @@ const getAllGyms = async(location) => {
     }
 }
 
+// COMBINE ANY NOTES WITH GYM SEARCH RESULTS
+const combineNotesGyms = async (location) => {
+    try {
+        const gyms = await getAllGyms(location)
+        const gymNotes = await getNotes(gyms);
+        gyms.forEach(gymObj => {
+            for (let i = 0; i < gymNotes.length; i++) {
+                const currNote = gymNotes[i];
+                if (gymObj['id'] === currNote['dataValues']['businessId']) {
+                    gymObj['Notes'] = currNote['dataValues'];
+                }
+            }
+        });
+        // return merged notes/gyms array
+        return gyms;
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 
@@ -80,4 +98,4 @@ const getAllGyms = async(location) => {
 //         console.log(err);
 //     }
 // }
-module.exports = { getAllGyms }
+module.exports = { combineNotesGyms }

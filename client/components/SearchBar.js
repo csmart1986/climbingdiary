@@ -16,10 +16,11 @@ class SearchBar extends Component {
   // get all gyms at specific location
   getGyms = async (location) => {
     try {
-      await axios.post(
+      const allGyms = await axios.post(
         `http://localhost:3000/api/gyms`, {location: this.state.location}
       )
-      // return something
+      console.log('ALL GYMS: ',allGyms)
+      return allGyms
     } catch (error) {
       console.log(error)
     }
@@ -37,6 +38,10 @@ class SearchBar extends Component {
       location: this.state.location
     })
     const gyms = this.getGyms(this.state.location);
+  
+    // this.setState({
+    //   location:'' 
+    // })
   };
 
   render() {
