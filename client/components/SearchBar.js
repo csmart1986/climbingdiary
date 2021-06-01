@@ -2,13 +2,14 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 // import thunk
 import { getGyms } from '../store/gyms';
 
 class SearchBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
         location: '',
     };
@@ -38,14 +39,16 @@ class SearchBar extends Component {
 
   async handleSubmit(e) {
     e.preventDefault();
-    this.setState({
-      location: this.state.location
-    })
+    // this.setState({
+    //   location: this.state.location
+    // })
     // const gyms = await this.getGyms(this.state.location);
-    this.props.fetchGyms(this.state.location);
+    console.log('location: ', this.state.location)
+    await this.props.fetchGyms(this.state.location);
     // this.setState({
     //   location:'' 
     // })
+    this.props.history.push('/allgyms');
 
   };
 
@@ -58,23 +61,23 @@ class SearchBar extends Component {
             onChange={this.handleChange}
             value={this.state.location}
           />
-          <button type='submit'>Search</button>
+          {/* <Link to='/allgyms'> */}
+            <button type='submit'>Search</button>
+          {/* </Link> */}
         </form>
       </div>
     ) 
   }
 }
 
-const mapState = state => {
-  return {
-    gyms: state.gyms.all,
-  }
-};
 
 const mapDispatch = dispatch => {
   return {
-    fetchGyms: (location) => dispatch(getGyms(location))
+    fetchGyms: (location) => {
+      console.log('mapdispatch:',location)
+      dispatch(getGyms(location))
+    }
   };
 }
 
-export default connect(mapState, mapDispatch)(SearchBar);
+export default connect(null, mapDispatch)(SearchBar);
