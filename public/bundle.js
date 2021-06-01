@@ -2760,15 +2760,40 @@ var SearchBar = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "handleSubmit",
-    value: function handleSubmit(e) {
-      e.preventDefault();
-      this.setState({
-        location: this.state.location
-      });
-      var gyms = this.getGyms(this.state.location); // this.setState({
-      //   location:'' 
-      // })
-    }
+    value: function () {
+      var _handleSubmit = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default().mark(function _callee2(e) {
+        var gyms;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_8___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                e.preventDefault();
+                this.setState({
+                  location: this.state.location
+                });
+                _context2.next = 4;
+                return this.getGyms(this.state.location);
+
+              case 4:
+                gyms = _context2.sent;
+                console.log('handleSubmit: ', gyms); // this.setState({
+                //   location:'' 
+                // })
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this);
+      }));
+
+      function handleSubmit(_x2) {
+        return _handleSubmit.apply(this, arguments);
+      }
+
+      return handleSubmit;
+    }()
   }, {
     key: "render",
     value: function render() {

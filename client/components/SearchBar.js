@@ -32,13 +32,13 @@ class SearchBar extends Component {
     })
   };
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     this.setState({
       location: this.state.location
     })
-    const gyms = this.getGyms(this.state.location);
-  
+    const gyms = await this.getGyms(this.state.location);
+    console.log('handleSubmit: ', gyms)
     // this.setState({
     //   location:'' 
     // })
