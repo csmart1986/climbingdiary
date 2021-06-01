@@ -1,10 +1,10 @@
 
-import { combineReducers } from 'redux'
-import specializedReducer from './reducer1'
+import { combineReducers } from 'redux';
+import gyms from './gyms';
 
 const primaryReducer = combineReducers({
-  key1: specializedReducer,
-})
+  gyms
+});
 
 export default primaryReducer
 

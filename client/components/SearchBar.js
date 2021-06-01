@@ -13,7 +13,7 @@ class SearchBar extends Component {
     this.getGyms = this.getGyms.bind(this);
   };
   
-  // get all gyms at specific location
+  // get all gyms/notes at specific location
   getGyms = async (location) => {
     try {
       const allGyms = await axios.post(
@@ -42,6 +42,7 @@ class SearchBar extends Component {
     // this.setState({
     //   location:'' 
     // })
+
   };
 
   render() {
