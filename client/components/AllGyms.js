@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
-
+import SearchBar from './SearchBar';
 
 class AllGyms extends Component {
     
@@ -19,6 +19,7 @@ class AllGyms extends Component {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <a className="nav-item nav-link active" href="/">Home <span className="sr-only">(current)</span></a>
                         </div>
+                    <SearchBar/>
                     </nav>
                 </div>
                 <div id='gyms-list'>
