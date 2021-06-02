@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 class AllGyms extends Component {
     
     render() {
+        
         return (
             <div>
                 <div id='nav-bar'>
@@ -34,9 +35,13 @@ class AllGyms extends Component {
                                         <h4 className="gym-info">Phone: {gym.phone}</h4>
                                     </div>
                                     <div className='card' >
-                                        <h4 className="gym-notes">Notes: </h4>
-                                        <h8>Date: {gym.Notes ? gym.Notes.date : ''}</h8>
-                                        <p>{gym.Notes ? gym.Notes.noteBody : 'No Notes'}</p>
+                                        <div className="card-header">Notes: </div>
+                                        {gym.Notes.map((note) => (
+                                            <div className='card-body' key={note.id}>
+                                                <h6 className='cared-title'>Date: {note ? note.date : ''}</h6>
+                                                <p className='card-text'>{note.noteBody}</p>
+                                            </div>
+                                        ))}
                                     </div>
                             </div>    
                     ))}

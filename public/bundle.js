@@ -2311,9 +2311,18 @@ var AllGyms = /*#__PURE__*/function (_Component) {
           className: "gym-info"
         }, "Phone: ", gym.phone)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
           className: "card"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
-          className: "gym-notes"
-        }, "Notes: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h8", null, "Date: ", gym.Notes ? gym.Notes.date : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("p", null, gym.Notes ? gym.Notes.noteBody : 'No Notes')));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+          className: "card-header"
+        }, "Notes: "), gym.Notes.map(function (note) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+            className: "card-body",
+            key: note.id
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h6", {
+            className: "cared-title"
+          }, "Date: ", note ? note.date : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("p", {
+            className: "card-text"
+          }, note.noteBody));
+        })));
       })));
     }
   }]);
@@ -2502,11 +2511,11 @@ var SearchBar = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("form", {
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
-        "class": "input-group mb-3"
+        className: "input-group mb-3"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
-        "class": "input-group-prepend"
+        className: "input-group-prepend"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("span", {
-        "class": "input-group-text",
+        className: "input-group-text",
         id: "near"
       }, "Near")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("input", {
         type: "text",
@@ -2515,9 +2524,9 @@ var SearchBar = /*#__PURE__*/function (_Component) {
         onChange: this.handleChange,
         value: this.state.location
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
-        "class": "input-group-append"
+        className: "input-group-append"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("button", {
-        "class": "btn btn-dark",
+        className: "btn btn-dark",
         type: "submit"
       }, "Search")))));
     }
@@ -2529,7 +2538,6 @@ var SearchBar = /*#__PURE__*/function (_Component) {
 var mapDispatch = function mapDispatch(dispatch) {
   return {
     fetchGyms: function fetchGyms(location) {
-      console.log('mapdispatch:', location);
       dispatch((0,_store_gyms__WEBPACK_IMPORTED_MODULE_11__.getGyms)(location));
     }
   };

@@ -34,9 +34,9 @@ class SearchBar extends Component {
       <div id='search-bar'>
         <form onSubmit={this.handleSubmit}>
           {/* <label htmlFor="inputCity" id='near'>Near:</label> */}
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="near">Near</span>
+          <div className="input-group mb-3">
+            <div className="input-group-prepend">
+              <span className="input-group-text" id="near">Near</span>
             </div>
             <input type='text'
               className='searchbar'
@@ -44,8 +44,8 @@ class SearchBar extends Component {
               onChange={this.handleChange}
               value={this.state.location}
             />
-            <div class="input-group-append">
-              <button class="btn btn-dark" type='submit'>Search</button>
+            <div className="input-group-append">
+              <button className="btn btn-dark" type='submit'>Search</button>
             </div>
           </div>
         </form>
@@ -58,7 +58,6 @@ class SearchBar extends Component {
 const mapDispatch = dispatch => {
   return {
     fetchGyms: (location) => {
-      console.log('mapdispatch:',location)
       dispatch(getGyms(location))
     }
   };

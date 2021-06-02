@@ -12,7 +12,7 @@ const businessId = "8b4xgDOH4bextUIFJ-megw";
 const endpoint = "https://api.yelp.com/v3/businesses/";
 
 // GET ALL GYM NOTES that belong to logged in user 
-const getNotes = (businesses) => {
+const getNotes = async(businesses) => {
     // pull out the businessId for each gym and add value to businessIdArr
     const businessIdArr = [];
     businesses.forEach(businessObj => {
@@ -20,7 +20,7 @@ const getNotes = (businesses) => {
     })
     try {
         // get the user's notes for only the gyms that are found in the gym array  
-        const notes = Note.findAll({
+        const notes = await Note.findAll({
             where: {
                 businessId: {[Op.in]: businessIdArr},
                 // only return notes belonging to logged in user
@@ -66,14 +66,17 @@ const combineNotesGyms = async (location) => {
     try {
         const gyms = await getAllGyms(location)
         const gymNotes = await getNotes(gyms);
+        
         gyms.forEach(gymObj => {
+            gymObj['Notes'] = [];
             for (let i = 0; i < gymNotes.length; i++) {
                 const currNote = gymNotes[i];
                 if (gymObj['id'] === currNote['dataValues']['businessId']) {
-                    gymObj['Notes'] = currNote['dataValues'];
+                    gymObj['Notes'].push(currNote['dataValues']);
                 }
             }
         });
+        console.log("GYM NOTES: ", gyms[1])
         // return merged notes/gyms array
         return gyms;
     } catch (error) {
