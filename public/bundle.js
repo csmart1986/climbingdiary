@@ -2439,26 +2439,13 @@ var SearchBar = /*#__PURE__*/function (_Component) {
       location: ''
     };
     _this.handleChange = _this.handleChange.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this.handleSubmit = _this.handleSubmit.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this)); // this.getGyms = this.getGyms.bind(this);
-
+    _this.handleSubmit = _this.handleSubmit.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
     return _this;
   }
 
   (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__.default)(SearchBar, [{
     key: "handleChange",
-    value: // get all gyms/notes at specific location
-    // getGyms = async (location) => {
-    //   try {
-    //     const allGyms = await axios.post(
-    //       `http://localhost:3000/api/gyms`, {location: this.state.location}
-    //     )
-    //     console.log('ALL GYMS: ',allGyms)
-    //     return allGyms
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
-    function handleChange(e) {
+    value: function handleChange(e) {
       this.setState({
         location: e.target.value
       });
@@ -2471,22 +2458,14 @@ var SearchBar = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                e.preventDefault(); // this.setState({
-                //   location: this.state.location
-                // })
-                // const gyms = await this.getGyms(this.state.location);
-
-                console.log('location: ', this.state.location);
-                _context.next = 4;
+                e.preventDefault();
+                _context.next = 3;
                 return this.props.fetchGyms(this.state.location);
 
-              case 4:
-                // this.setState({
-                //   location:'' 
-                // })
+              case 3:
                 this.props.history.push('/allgyms');
 
-              case 5:
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -2620,31 +2599,29 @@ var getGyms = function getGyms(location) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.prev = 0;
-              console.log('location in thunk:', location); // make API call to get all gyms/notes at specific location
-
-              _context.next = 4;
+              _context.next = 3;
               return axios__WEBPACK_IMPORTED_MODULE_3___default().post("http://localhost:3000/api/gyms", {
                 location: location
               });
 
-            case 4:
+            case 3:
               allGyms = _context.sent;
               // Dispatch action to reducer to update state
               dispatch(receivedGyms(allGyms));
-              _context.next = 11;
+              _context.next = 10;
               break;
 
-            case 8:
-              _context.prev = 8;
+            case 7:
+              _context.prev = 7;
               _context.t0 = _context["catch"](0);
               throw _context.t0;
 
-            case 11:
+            case 10:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 8]]);
+      }, _callee, null, [[0, 7]]);
     }));
 
     return function (_x) {

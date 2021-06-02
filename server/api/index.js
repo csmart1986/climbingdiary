@@ -11,7 +11,6 @@ const router = require('express').Router();
 router.post('/gyms', async (req, res, next) => {
     try {
         let data = await combineNotesGyms(req.body.location);
-        console.log('req body location: ', req.body.location)
         console.log('DATA: ',data[0])
         res.send(data);
     }
