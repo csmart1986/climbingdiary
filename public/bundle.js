@@ -2309,7 +2309,7 @@ var AllGyms = /*#__PURE__*/function (_Component) {
           className: "gym-info"
         }, "Name: ", gym.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
-        }, "Rating: ", gym.rating), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
+        }, "Yelp Rating: ", gym.rating), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
         }, "Location: ", gym.location.address1, ", ", gym.location.city, ", ", gym.location.state, ", ", gym.location.zip_code), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"

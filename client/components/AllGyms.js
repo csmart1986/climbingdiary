@@ -30,7 +30,7 @@ class AllGyms extends Component {
                                     </div>
                                     <div className='body'>
                                         <h4 className="gym-info">Name: {gym.name}</h4>
-                                        <h4 className="gym-info">Rating: {gym.rating}</h4>
+                                        <h4 className="gym-info">Yelp Rating: {gym.rating}</h4>
                                         <h4 className="gym-info">Location: {gym.location.address1}, {gym.location.city}, {gym.location.state}, {gym.location.zip_code}</h4>
                                         <h4 className="gym-info">Phone: {gym.phone}</h4>
                                     </div>
