@@ -2239,8 +2239,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 
@@ -2270,56 +2269,56 @@ var AllGyms = /*#__PURE__*/function (_Component) {
   (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(AllGyms, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
         id: "nav-bar"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("nav", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("nav", {
         className: "navbar navbar-expand-lg navbar-light "
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("a", {
         className: "navbar-brand",
         href: "#"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("img", {
         src: "logo.png",
         width: "100",
         height: "80",
         className: "d-inline-block align-top",
         alt: "logo"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
         className: "collapse navbar-collapse",
         id: "navbarNav"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("a", {
         className: "nav-item nav-link active",
         href: "/"
-      }, "Home ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("span", {
+      }, "Home ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("span", {
         className: "sr-only"
-      }, "(current)"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+      }, "(current)"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
         id: "gyms-list"
       }, this.props.gyms === undefined ? 'Loading' : this.props.gyms === '' ? 'Bad search input.  Please enter a valid city.' : this.props.gyms.map(function (gym) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
           className: "gyms",
           key: gym.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("img", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("img", {
           className: "gym-pic",
           src: gym.image_url,
           alt: gym.name
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
           className: "gym-info"
-        }, "Name: ", gym.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
+        }, "Name: ", gym.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
           className: "gym-info"
-        }, "Rating: ", gym.rating), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
+        }, "Rating: ", gym.rating), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
           className: "gym-info"
-        }, "Location: ", gym.location.address1, ", ", gym.location.city, ", ", gym.location.state, ", ", gym.location.zip_code), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
+        }, "Location: ", gym.location.address1, ", ", gym.location.city, ", ", gym.location.state, ", ", gym.location.zip_code), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
           className: "gym-info"
-        }, "Phone: ", gym.phone)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+        }, "Phone: ", gym.phone)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
           className: "card"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
           className: "card-header"
         }, "Notes: "), gym.Notes.map(function (note) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
             className: "card-body",
             key: note.id
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h6", {
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h6", {
             className: "cared-title"
-          }, "Date: ", note ? note.date : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("p", {
+          }, "Date: ", note ? note.date : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("p", {
             className: "card-text"
           }, note.noteBody));
         })));
@@ -2328,7 +2327,7 @@ var AllGyms = /*#__PURE__*/function (_Component) {
   }]);
 
   return AllGyms;
-}(react__WEBPACK_IMPORTED_MODULE_7__.Component);
+}(react__WEBPACK_IMPORTED_MODULE_6__.Component);
 
 var mapState = function mapState(state) {
   return {
@@ -2374,7 +2373,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchBar */ "./client/components/SearchBar.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 
 
 
@@ -2425,8 +2424,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _store_gyms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../store/gyms */ "./client/store/gyms.js");
+/* harmony import */ var _store_gyms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../store/gyms */ "./client/store/gyms.js");
 
 
 
@@ -2538,7 +2536,7 @@ var SearchBar = /*#__PURE__*/function (_Component) {
 var mapDispatch = function mapDispatch(dispatch) {
   return {
     fetchGyms: function fetchGyms(location) {
-      dispatch((0,_store_gyms__WEBPACK_IMPORTED_MODULE_11__.getGyms)(location));
+      dispatch((0,_store_gyms__WEBPACK_IMPORTED_MODULE_10__.getGyms)(location));
     }
   };
 };
@@ -2559,9 +2557,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/HomePage */ "./client/components/HomePage.js");
-/* harmony import */ var _components_AllGyms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/AllGyms */ "./client/components/AllGyms.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/HomePage */ "./client/components/HomePage.js");
+/* harmony import */ var _components_AllGyms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/AllGyms */ "./client/components/AllGyms.js");
 
 
 
@@ -2571,14 +2569,14 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Routes() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
     exact: true,
     path: "/",
-    component: _components_HomePage__WEBPACK_IMPORTED_MODULE_2__.HomePage
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+    component: _components_HomePage__WEBPACK_IMPORTED_MODULE_1__.HomePage
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Route, {
     exact: true,
     path: "/allgyms",
-    component: _components_AllGyms__WEBPACK_IMPORTED_MODULE_3__.default
+    component: _components_AllGyms__WEBPACK_IMPORTED_MODULE_2__.default
   }));
 }
 
@@ -2734,12 +2732,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _gyms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gyms */ "./client/store/gyms.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _gyms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gyms */ "./client/store/gyms.js");
 
 
-var primaryReducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  gyms: _gyms__WEBPACK_IMPORTED_MODULE_1__.default
+var primaryReducer = (0,redux__WEBPACK_IMPORTED_MODULE_1__.combineReducers)({
+  gyms: _gyms__WEBPACK_IMPORTED_MODULE_0__.default
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (primaryReducer);
 
