@@ -19,6 +19,13 @@ async function seed() {
         username: 'csmart',
         password: 'test'
       },
+      {
+        firstName: 'Jim',
+        lastName: 'Poon',
+        email: 'jimpoon@gmail.com',
+        username: 'jpoon',
+        password: 'test'
+      },
     ];
     const [ catherine ] = await User.bulkCreate(users, {returning: true});
 
@@ -36,6 +43,18 @@ async function seed() {
         noteBody: "Here are my notes for Planet Granite!",
         userId: 1,
       },
+      {
+        businessId: "yR2AbNAOuzqpJfmGwV0O3g",
+        date: '2021-04-09',
+        noteBody: "Here are my notes for Mission Cliffs!",
+        userId: 1,
+      },
+      {
+        businessId: "ecoN_Wu43bsU3MZbJRZEhg",
+        date: '2021-04-09',
+        noteBody: "Here are my notes for Dogpatch Boulders!",
+        userId: 2,
+      }
     ];
     const [note1] = await Note.bulkCreate(notes);
 
