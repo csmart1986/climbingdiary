@@ -21,7 +21,7 @@ class AllGyms extends Component {
                     </nav>
                 </div>
                 <div id='gyms-list'>
-                    {this.props.gyms === undefined ? 'Loading' :
+                    {this.props.gyms === undefined ? 'Loading' : this.props.gyms === '' ? 'Bad search input.  Please enter a valid city.' :
                         this.props.gyms.map((gym) => (
                             <div className='gyms' key={gym.id}>
                                 <img className='gym-pic' src={gym.image_url} alt={gym.name} />

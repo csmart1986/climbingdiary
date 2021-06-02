@@ -45,7 +45,7 @@ const getNotes = (businesses) => {
 // GET ALL GYMS FROM YELP BY LOCATION
 const getAllGyms = async(location) => {
     try {
-        const { data, status } = await axios.get(
+        const { data } = await axios.get(
             `${endpoint}search?term='climbing gym'&location='${location}'`, 
             {
                 headers: {
@@ -53,7 +53,7 @@ const getAllGyms = async(location) => {
                 }
             }  
         )
-        if (data.businesses.length < 1) return 'No gyms found'
+        if (data.businesses.length < 1) return 'No gyms found';
         return data.businesses;
     }
     catch (err) {

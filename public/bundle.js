@@ -2291,7 +2291,7 @@ var AllGyms = /*#__PURE__*/function (_Component) {
         className: "sr-only"
       }, "(current)"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
         id: "gyms-list"
-      }, this.props.gyms === undefined ? 'Loading' : this.props.gyms.map(function (gym) {
+      }, this.props.gyms === undefined ? 'Loading' : this.props.gyms === '' ? 'Bad search input.  Please enter a valid city.' : this.props.gyms.map(function (gym) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
           className: "gyms",
           key: gym.id
@@ -2492,7 +2492,7 @@ var SearchBar = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("form", {
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("label", {
-        "for": "inputCity"
+        htmlFor: "inputCity"
       }, "Near"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("input", {
         type: "text",
         placeholder: "enter city",

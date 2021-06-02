@@ -33,7 +33,7 @@ class SearchBar extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label for="inputCity">Near</label>
+          <label htmlFor="inputCity">Near</label>
           <input type='text'
             placeholder='enter city'
             onChange={this.handleChange}
