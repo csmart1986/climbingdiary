@@ -25,10 +25,10 @@ class AllGyms extends Component {
                     {this.props.gyms === undefined ? 'Loading' : this.props.gyms === '' ? 'Bad search input.  Please enter a valid city.' :
                         this.props.gyms.map((gym) => (
                             <div className='gyms' key={gym.id}>
-                                    <div>
+                                    <div className='image'>
                                     <img className='gym-pic' src={gym.image_url} alt={gym.name} />                            
                                     </div>
-                                    <div>
+                                    <div className='body'>
                                         <h4 className="gym-info">Name: {gym.name}</h4>
                                         <h4 className="gym-info">Rating: {gym.rating}</h4>
                                         <h4 className="gym-info">Location: {gym.location.address1}, {gym.location.city}, {gym.location.state}, {gym.location.zip_code}</h4>
