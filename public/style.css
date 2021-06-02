@@ -3,7 +3,26 @@
 body {
     /* font-family: sans-serif; */
     background: #EEEEEE;
-    text-align: center;
+    text-align:  center;
+}
+
+#login-btn {
+  margin-top: 50px;
+  margin-right: 150px;
+}
+
+#signup-btn {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.main-icon {
+    width: 300px;
+}
+
+.intro {
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 /* Footer styling */
@@ -17,4 +36,19 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+/* SearchBar styling */
+#search-bar {
+    text-align: center;
+    display: inline-block;
+}
+ 
+#near {
+    font-size: 20px;
+}
+
+.input-group-append {
+    background-color: black;
+    color: white;
 }

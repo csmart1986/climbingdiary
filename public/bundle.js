@@ -2371,17 +2371,23 @@ var HomePage = function HomePage(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "homePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "btn btn-dark"
+    id: "login-btn",
+    className: "btn btn-dark btn-lg"
   }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "btn btn-dark"
+    id: "signup-btn",
+    className: "btn btn-dark btn-lg"
   }, "Signup")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "main-icon",
     src: "logo.png"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Find the local climbing gyms..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "intro"
+  }, "Find the local climbing gyms..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
     exact: true,
     path: "/",
     component: _SearchBar__WEBPACK_IMPORTED_MODULE_1__.default
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "And keep track of your climbs!"));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "intro"
+  }, "And keep track of your climbs!"));
 };
 
 /***/ }),
@@ -2489,18 +2495,29 @@ var SearchBar = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("form", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
+        id: "search-bar"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("form", {
         onSubmit: this.handleSubmit
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("label", {
-        htmlFor: "inputCity"
-      }, "Near"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
+        "class": "input-group mb-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
+        "class": "input-group-prepend"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("span", {
+        "class": "input-group-text",
+        id: "near"
+      }, "Near")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("input", {
         type: "text",
+        className: "searchbar",
         placeholder: "enter city",
         onChange: this.handleChange,
         value: this.state.location
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("button", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", {
+        "class": "input-group-append"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("button", {
+        "class": "btn btn-dark",
         type: "submit"
-      }, "Search")));
+      }, "Search")))));
     }
   }]);
 
@@ -2738,7 +2755,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* HomePage styling */\n\nbody {\n    /* font-family: sans-serif; */\n    background: #EEEEEE;\n    text-align: center;\n}\n\n/* Footer styling */\n#footer{\n    position: fixed;\n    background: #691292;\n    color: rgb(209, 209, 47);\n    margin-top: auto;\n    height: 50px;\n    width: 100%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n}", "",{"version":3,"sources":["webpack://./public/style.css"],"names":[],"mappings":"AAAA,qBAAqB;;AAErB;IACI,6BAA6B;IAC7B,mBAAmB;IACnB,kBAAkB;AACtB;;AAEA,mBAAmB;AACnB;IACI,eAAe;IACf,mBAAmB;IACnB,wBAAwB;IACxB,gBAAgB;IAChB,YAAY;IACZ,WAAW;IACX,OAAO;IACP,QAAQ;IACR,SAAS;AACb","sourcesContent":["/* HomePage styling */\n\nbody {\n    /* font-family: sans-serif; */\n    background: #EEEEEE;\n    text-align: center;\n}\n\n/* Footer styling */\n#footer{\n    position: fixed;\n    background: #691292;\n    color: rgb(209, 209, 47);\n    margin-top: auto;\n    height: 50px;\n    width: 100%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* HomePage styling */\n\nbody {\n    /* font-family: sans-serif; */\n    background: #EEEEEE;\n    text-align:  center;\n}\n\n#login-btn {\n  margin-top: 50px;\n  margin-right: 150px;\n}\n\n#signup-btn {\n    margin-top: 50px;\n    margin-left: 150px;\n}\n\n.main-icon {\n    width: 300px;\n}\n\n.intro {\n    margin-bottom: 50px;\n    margin-top: 50px;\n}\n\n/* Footer styling */\n#footer{\n    position: fixed;\n    background: #691292;\n    color: rgb(209, 209, 47);\n    margin-top: auto;\n    height: 50px;\n    width: 100%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n}\n\n/* SearchBar styling */\n#search-bar {\n    text-align: center;\n    display: inline-block;\n}\n \n#near {\n    font-size: 20px;\n}\n\n.input-group-append {\n    background-color: black;\n    color: white;\n}", "",{"version":3,"sources":["webpack://./public/style.css"],"names":[],"mappings":"AAAA,qBAAqB;;AAErB;IACI,6BAA6B;IAC7B,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;EACE,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA,mBAAmB;AACnB;IACI,eAAe;IACf,mBAAmB;IACnB,wBAAwB;IACxB,gBAAgB;IAChB,YAAY;IACZ,WAAW;IACX,OAAO;IACP,QAAQ;IACR,SAAS;AACb;;AAEA,sBAAsB;AACtB;IACI,kBAAkB;IAClB,qBAAqB;AACzB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,uBAAuB;IACvB,YAAY;AAChB","sourcesContent":["/* HomePage styling */\n\nbody {\n    /* font-family: sans-serif; */\n    background: #EEEEEE;\n    text-align:  center;\n}\n\n#login-btn {\n  margin-top: 50px;\n  margin-right: 150px;\n}\n\n#signup-btn {\n    margin-top: 50px;\n    margin-left: 150px;\n}\n\n.main-icon {\n    width: 300px;\n}\n\n.intro {\n    margin-bottom: 50px;\n    margin-top: 50px;\n}\n\n/* Footer styling */\n#footer{\n    position: fixed;\n    background: #691292;\n    color: rgb(209, 209, 47);\n    margin-top: auto;\n    height: 50px;\n    width: 100%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n}\n\n/* SearchBar styling */\n#search-bar {\n    text-align: center;\n    display: inline-block;\n}\n \n#near {\n    font-size: 20px;\n}\n\n.input-group-append {\n    background-color: black;\n    color: white;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

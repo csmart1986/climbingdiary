@@ -31,15 +31,23 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div id='search-bar'>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="inputCity">Near</label>
-          <input type='text'
-            placeholder='enter city'
-            onChange={this.handleChange}
-            value={this.state.location}
-          />
-          <button type='submit'>Search</button>
+          {/* <label htmlFor="inputCity" id='near'>Near:</label> */}
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="near">Near</span>
+            </div>
+            <input type='text'
+              className='searchbar'
+              placeholder='enter city'
+              onChange={this.handleChange}
+              value={this.state.location}
+            />
+            <div class="input-group-append">
+              <button class="btn btn-dark" type='submit'>Search</button>
+            </div>
+          </div>
         </form>
       </div>
     ) 
