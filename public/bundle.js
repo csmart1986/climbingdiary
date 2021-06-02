@@ -2239,7 +2239,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 
@@ -2251,6 +2252,7 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 // import axios from 'axios';
+
 
 
 
@@ -2268,38 +2270,46 @@ var AllGyms = /*#__PURE__*/function (_Component) {
   (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(AllGyms, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("nav", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("nav", {
         className: "navbar navbar-expand-lg navbar-light bg-light"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("a", {
         className: "navbar-brand",
         href: "#"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("img", {
         src: "logo.png",
-        width: "140",
-        height: "120",
+        width: "100",
+        height: "80",
         className: "d-inline-block align-top",
         alt: "logo"
-      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarNav"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("a", {
+        className: "nav-item nav-link active",
+        href: "/"
+      }, "Home ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("span", {
+        className: "sr-only"
+      }, "(current)"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
         id: "gyms-list"
       }, this.props.gyms === undefined ? 'Loading' : this.props.gyms.map(function (gym) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("div", {
           className: "gyms",
           key: gym.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("img", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("img", {
           className: "gym-pic",
           src: gym.image_url,
           alt: gym.name
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
-        }, "Name: ", gym.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
+        }, "Name: ", gym.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
-        }, "Rating: ", gym.rating), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
+        }, "Rating: ", gym.rating), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
-        }, "URL: ", gym.url), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
+        }, "URL: ", gym.url), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
-        }, "Location: ", gym.location.address1, ", ", gym.location.city, ", ", gym.location.state, ", ", gym.location.zip_code), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
+        }, "Location: ", gym.location.address1, ", ", gym.location.city, ", ", gym.location.state, ", ", gym.location.zip_code), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
-        }, "Phone: ", gym.phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("h4", {
+        }, "Phone: ", gym.phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7__.createElement("h4", {
           className: "gym-info"
         }, "Notes: ", gym.Notes ? gym.Notes.noteBody : 'No Notes'));
       })));
@@ -2307,7 +2317,7 @@ var AllGyms = /*#__PURE__*/function (_Component) {
   }]);
 
   return AllGyms;
-}(react__WEBPACK_IMPORTED_MODULE_6__.Component);
+}(react__WEBPACK_IMPORTED_MODULE_7__.Component);
 
 var mapState = function mapState(state) {
   return {
@@ -2358,16 +2368,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomePage = function HomePage(props) {
-  // useState react hook (returns array), inital value is ''
-  // location => current state value, setLocation => fx to update location
-  // const [location, setLocation] = useState('');
-  // // handles keyword change in searchbar
-  // const updateLocation = (input) => {
-  //     setLocation(input)
-  // };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "homePage"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn btn-dark"
+  }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "btn btn-dark"
+  }, "Signup")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "main-icon",
     src: "logo.png"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Find the local climbing gyms..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
@@ -2484,9 +2491,11 @@ var SearchBar = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("form", {
         onSubmit: this.handleSubmit
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("label", {
+        "for": "inputCity"
+      }, "Near"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("input", {
         type: "text",
-        name: "enter city",
+        placeholder: "enter city",
         onChange: this.handleChange,
         value: this.state.location
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement("button", {
@@ -2729,7 +2738,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* HomePage styling */\n\nbody {\n    /* font-family: sans-serif; */\n    background: #EEEEEE;\n    text-align: center;\n}\n\n/* Footer styling */\n#footer{\n    position: fixed;\n    background: #691292;\n    color: rgb(209, 209, 47);\n    margin-top: auto;\n    height: 50px;\n    width: 100%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n}", "",{"version":3,"sources":["webpack://./public/style.css"],"names":[],"mappings":"AAAA,qBAAqB;;AAErB;IACI,6BAA6B;IAC7B,mBAAmB;IACnB,kBAAkB;AACtB;;AAEA,mBAAmB;AACnB;IACI,eAAe;IACf,mBAAmB;IACnB,wBAAwB;IACxB,gBAAgB;IAChB,YAAY;IACZ,WAAW;IACX,OAAO;IACP,QAAQ;IACR,SAAS;AACb","sourcesContent":["/* HomePage styling */\n\nbody {\n    /* font-family: sans-serif; */\n    background: #EEEEEE;\n    text-align: center;\n}\n\n/* Footer styling */\n#footer{\n    position: fixed;\n    background: #691292;\n    color: rgb(209, 209, 47);\n    margin-top: auto;\n    height: 50px;\n    width: 100%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -22,7 +22,9 @@ const getNotes = (businesses) => {
         // get the user's notes for only the gyms that are found in the gym array  
         const notes = Note.findAll({
             where: {
-                businessId: {[Op.in]: businessIdArr}
+                businessId: {[Op.in]: businessIdArr},
+                // only return notes belonging to logged in user
+                userId: 1  // currently hardcoded to be user 1
             }
         })
         // console.log('notes: ', notes)

@@ -1,0 +1,20 @@
+/* HomePage styling */
+
+body {
+    /* font-family: sans-serif; */
+    background: #EEEEEE;
+    text-align: center;
+}
+
+/* Footer styling */
+#footer{
+    position: fixed;
+    background: #691292;
+    color: rgb(209, 209, 47);
+    margin-top: auto;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

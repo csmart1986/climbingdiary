@@ -1,6 +1,6 @@
 // import axios from 'axios';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 
 
@@ -12,8 +12,12 @@ class AllGyms extends Component {
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href="#">
-                            <img src="logo.png" width="140" height="120" className="d-inline-block align-top" alt="logo"/>
+                            <img src="logo.png" width="100" height="80" className="d-inline-block align-top" 
+                            alt="logo"/>
                         </a>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <a className="nav-item nav-link active" href="/">Home <span className="sr-only">(current)</span></a>
+                        </div>
                     </nav>
                 </div>
                 <div id='gyms-list'>
