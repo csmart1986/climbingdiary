@@ -2268,8 +2268,18 @@ var AllGyms = /*#__PURE__*/function (_Component) {
   (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(AllGyms, [{
     key: "render",
     value: function render() {
-      console.log('prop: ', this.props.gyms);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("nav", {
+        className: "navbar navbar-expand-lg navbar-light bg-light"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("a", {
+        className: "navbar-brand",
+        href: "#"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("img", {
+        src: "logo.png",
+        width: "140",
+        height: "120",
+        className: "d-inline-block align-top",
+        alt: "logo"
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
         id: "gyms-list"
       }, this.props.gyms === undefined ? 'Loading' : this.props.gyms.map(function (gym) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {

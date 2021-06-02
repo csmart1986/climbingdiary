@@ -6,11 +6,16 @@ import React, { Component } from 'react';
 
 class AllGyms extends Component {
     
-    
     render() {
-        console.log('prop: ', this.props.gyms)
         return (
             <div>
+                <div>
+                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <a className="navbar-brand" href="#">
+                            <img src="logo.png" width="140" height="120" className="d-inline-block align-top" alt="logo"/>
+                        </a>
+                    </nav>
+                </div>
                 <div id='gyms-list'>
                     {this.props.gyms === undefined ? 'Loading' :
                         this.props.gyms.map((gym) => (
@@ -26,7 +31,6 @@ class AllGyms extends Component {
                     ))}
                 </div>
             </div>
-            
         )
     }
 }
