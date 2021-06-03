@@ -20,6 +20,7 @@ class AllGyms extends Component {
                             <a className="nav-item nav-link active" href="/">Home <span className="sr-only">(current)</span></a>
                         </div>
                     <SearchBar/>
+                    <button id='logout-btn' className="btn btn-dark" type="submit">Logout</button>
                     </nav>
                 </div>
                 <div id='gyms-list'>

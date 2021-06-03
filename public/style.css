@@ -58,6 +58,11 @@ body {
     background-color: #B5B5B5;
     margin-bottom: 35px;
     display: flex;
+    align-items: center;
+}
+
+#logout-btn {
+    margin-left: 1280px;
 }
 
 .gyms {
