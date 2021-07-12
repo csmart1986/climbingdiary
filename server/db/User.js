@@ -1,4 +1,3 @@
-// define User model
 const crypto = require('crypto'); // built in Crypto module from Node
 const _ = require('lodash');
 const Sequelize = require('sequelize');
