@@ -1,22 +1,23 @@
-const { combineNotesGyms } = require('./yelpAllGyms');
+//const { combineNotesGyms} = require('./yelpAllGyms');
 const router = require('express').Router();
 
 // all routes automatically start with /api to be routed here
 
-// process a group of routes in their own file
-// router.use('/users', require('./users'));
+// for any '/api/notes' route
+router.use('/notes', require('./notes'));
 
-// process an individual GET, POST, PUT, or DELETE route
+// for any '/api/gyms' route
+router.use('/gyms', require('./gyms'));
 
-router.post('/gyms', async (req, res, next) => {
-    try {
-        let data = await combineNotesGyms(req.body.location);  // needs to pass logged in user id
-        res.send(data);
-    }
-    catch (error) {
-        next(error);
-    }
-});
+// router.post('/gyms', async (req, res, next) => {
+//     try {
+//         let data = await combineNotesGyms(req.body.location);  // needs to pass logged in user id
+//         res.send(data);
+//     }
+//     catch (error) {
+//         next(error);
+//     }
+// });
 
 
 // router.get('/gyms/:id', async (req, res, next) => {

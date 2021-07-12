@@ -49,12 +49,12 @@ async function seed() {
         noteBody: "Here are my notes for Mission Cliffs!",
         userId: 1,
       },
-      {
-        businessId: "yR2AbNAOuzqpJfmGwV0O3g",
-        date: '2021-06-01',
-        noteBody: "Fell 3 times on 5.11c",
-        userId: 1,
-      },
+      // {
+      //   businessId: "yR2AbNAOuzqpJfmGwV0O3g",
+      //   date: '2021-06-01',
+      //   noteBody: "Fell 3 times on 5.11c",
+      //   userId: 1,
+      // },
       {
         businessId: "ecoN_Wu43bsU3MZbJRZEhg",
         date: '2021-04-09',
