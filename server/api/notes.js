@@ -7,15 +7,20 @@ const { Note } = require('../db/index');
 // PUT api/notes/:id
 router.put('/:businessId', async (req, res, next) => {
     const {note} = req.body;
-    console.log('in route')
+    console.log("NOTE: ",note)
+    let user = 1;
     try {
       // if note belongs to logged in user
-      // req.user === userId &&
-      if (req.params.businessId === note.businessId) {
-        const noteInDb = await Note.findByPk(note.businessId);
-        console.log('NOTE: ', noteInDb)
-        const updatedNote = await noteInDb.update(note);
-        res.send(updatedNote);
+        // req.user === userId CURRENTLY HARDCODED
+        if (user === 1) {
+            const noteInDb = await Note.findAll({
+                where: {
+                    businessId: req.params.businessId
+                }
+            });
+        //console.log('NOTE: ', noteInDb)
+        //const updatedNote = await noteInDb.update(note);
+        res.send('found it');
       }
     } catch (error) {
         next(error);

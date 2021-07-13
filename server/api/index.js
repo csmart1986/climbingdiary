@@ -9,16 +9,6 @@ router.use('/notes', require('./notes'));
 // for any '/api/gyms' route
 router.use('/gyms', require('./gyms'));
 
-// router.post('/gyms', async (req, res, next) => {
-//     try {
-//         let data = await combineNotesGyms(req.body.location);  // needs to pass logged in user id
-//         res.send(data);
-//     }
-//     catch (error) {
-//         next(error);
-//     }
-// });
-
 
 // router.get('/gyms/:id', async (req, res, next) => {
 //     try {
