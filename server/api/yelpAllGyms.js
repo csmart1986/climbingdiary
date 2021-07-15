@@ -76,7 +76,7 @@ const combineNotesGyms = async (location) => {
                 }
             }
         });
-        console.log("GYM NOTES: ", gyms[1])
+        //console.log("GYM NOTES: ", gyms[1])
         // return merged notes/gyms array
         return gyms;
     } catch (error) {

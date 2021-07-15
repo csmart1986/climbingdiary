@@ -1,13 +1,13 @@
 // import axios from 'axios';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
+import Notes from './Notes';
 
 class AllGyms extends Component {
-    
+
     render() {
-        
+    
         return (
             <div>
                 <div id='nav-bar'>
@@ -36,7 +36,8 @@ class AllGyms extends Component {
                                         <h4 className="gym-info">Location: {gym.location.address1}, {gym.location.city}, {gym.location.state}, {gym.location.zip_code}</h4>
                                         <h4 className="gym-info">Phone: {gym.phone}</h4>
                                     </div>
-                                    <div className='card' >
+                                    <Notes gym={gym}/>
+                                    {/* <div className='card' >
                                         <div className="card-header">Notes: </div>
                                         {gym.Notes.map((note) => (
                                             <div className='card-body' key={note.id}>
@@ -44,7 +45,8 @@ class AllGyms extends Component {
                                                 <p className='card-text'>{note.noteBody}</p>
                                             </div>
                                         ))}
-                                    </div>
+                                    </div> */}
+
                             </div>    
                     ))}
                 </div>
